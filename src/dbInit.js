@@ -9,7 +9,7 @@ async function seedDatabase(){
         if(result.rowCount == 0){
             await db.query(
                 `INSERT INTO events(event_id, name, total_seats, available_seats, version)
-                 VALUES($1,$2,$3,$4)`,
+                 VALUES($1,$2,$3,$4,$5)`,
                 [EVENT_ID, 'Node.js Meet-up', 500, 500, 0]
             );
         }
